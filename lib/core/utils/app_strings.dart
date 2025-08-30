@@ -3,4 +3,8 @@ class AppStrings {
   static const String noRouteFound = 'No Route Found';
   static const String contentType = 'Content-Type';
   static const String applicationJson = 'application/json';
+  static const String home = 'Home';
+  static const String menu = 'Menu';
+  static const String profile = 'Profile';
+  static const String more = 'More';
 }
