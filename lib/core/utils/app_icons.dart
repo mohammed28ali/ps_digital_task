@@ -4,4 +4,6 @@ class AppIcons {
   static const String moreIcon = "assets/icons/more_icon.svg";
   static const String profileIcon = "assets/icons/profile_icon.svg";
   static const String menuIcon = "assets/icons/menu_icon.svg";
+  static const String searchIcon = "assets/icons/search_icon.svg";
+  static const String expandLessIcon = "assets/icons/expand_less_icon.svg";
 }

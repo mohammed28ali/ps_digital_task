@@ -7,4 +7,6 @@ class AppStrings {
   static const String menu = 'Menu';
   static const String profile = 'Profile';
   static const String more = 'More';
+  static const String exploreMenu = 'Explore Menu';
+  static const String sandwiches = 'Sandwiches';
 }

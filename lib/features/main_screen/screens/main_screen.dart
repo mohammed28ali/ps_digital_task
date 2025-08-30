@@ -7,6 +7,7 @@ import 'package:ps_digital_task/core/utils/app_icons.dart';
 import 'package:ps_digital_task/core/utils/app_sizes.dart';
 import 'package:ps_digital_task/core/utils/app_strings.dart';
 import 'package:ps_digital_task/features/main_screen/cubit/bottom_nav_cubit.dart';
+import 'package:ps_digital_task/features/menu_screen/presentation/screen/menu_screen.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({super.key});
@@ -131,15 +132,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(child: Text("Home Screen"));
-  }
-}
-
-class MenuScreen extends StatelessWidget {
-  const MenuScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(child: Text("Menu Screen"));
   }
 }
 
