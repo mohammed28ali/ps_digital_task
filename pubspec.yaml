@@ -38,6 +38,7 @@ flutter:
   assets:
     - assets/
     - assets/fonts/
+    - assets/icons/
  
   # To add custom fonts to your application, add a fonts section here,
  
@@ -47,6 +48,6 @@ flutter:
         - asset: assets/fonts/GothicCnd.ttf
     - family: BikerDiamond
       fonts:
-        - asset: assets/fonts/BikerDiamond.ttf
+        - asset: assets/fonts/BikerDiamond.otf
       
 
