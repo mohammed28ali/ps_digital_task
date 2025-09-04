@@ -8,4 +8,8 @@ class AppIcons {
   static const String expandLessIcon = "assets/icons/expand_less_icon.svg";
   static const String plusIcon = "assets/icons/plus_icon.svg";
   static const String trashIcon = "assets/icons/trash_icon.svg";
+  static const String egyptFlag = "assets/icons/egypt_flag.svg";
+  static const String favIcon = "assets/icons/fav_icon.svg";
+  static const String logoutIcon = "assets/icons/logout_icon.svg";
+  static const String rewardsIcon = "assets/icons/rewards.svg";
 }

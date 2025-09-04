@@ -8,6 +8,7 @@ import 'package:ps_digital_task/core/utils/app_sizes.dart';
 import 'package:ps_digital_task/core/utils/app_strings.dart';
 import 'package:ps_digital_task/features/main_screen/cubit/bottom_nav_cubit.dart';
 import 'package:ps_digital_task/features/menu_screen/presentation/screen/menu_screen.dart';
+import 'package:ps_digital_task/features/profile_screen/presentation/screens/profile_screen.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({super.key});
@@ -100,7 +101,7 @@ class MainScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                label: AppStrings.more,
+                label: AppStrings.profile,
               ),
               BottomNavigationBarItem(
                 icon: SizedBox(
@@ -141,15 +142,6 @@ class PacketScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(child: Text("Packet Screen"));
-  }
-}
-
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(child: Text("Profile Screen"));
   }
 }
 
