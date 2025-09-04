@@ -1,0 +1,98 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ps_digital_task/core/helpers/spacing.dart';
+import 'package:ps_digital_task/core/utils/app_colors.dart';
+import 'package:ps_digital_task/core/utils/app_icons.dart';
+import 'package:ps_digital_task/core/utils/app_sizes.dart';
+import 'package:ps_digital_task/core/utils/app_strings.dart';
+import 'package:ps_digital_task/features/profile_screen/presentation/widgets/custom_divider.dart';
+import 'package:ps_digital_task/features/profile_screen/presentation/widgets/footer_item_widget.dart';
+import 'package:ps_digital_task/features/profile_screen/presentation/widgets/nav_widget.dart';
+import 'package:ps_digital_task/features/profile_screen/presentation/widgets/profile_card.dart';
+import 'package:ps_digital_task/features/profile_screen/presentation/widgets/profile_header.dart';
+import 'package:ps_digital_task/features/profile_screen/presentation/widgets/profile_item.dart';
+
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: AppSizes.defaultScaffoldHorizontalPaddingValue.w,
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              ProfileHeader(),
+              ProfileCard(),
+
+              verticalSpace(AppSizes.s5),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  NavigationWidget(
+                    icon: AppIcons.favIcon,
+                    title: AppStrings.favorites,
+                  ),
+                  NavigationWidget(
+                    icon: AppIcons.rewardsIcon,
+                    title: AppStrings.rewards,
+                  ),
+                  NavigationWidget(
+                    icon: AppIcons.packet,
+                    title: AppStrings.orders,
+                  ),
+                ],
+              ),
+              verticalSpace(AppSizes.s20),
+              ProfileItem(
+                icon: AppIcons.locationIcon,
+                title: AppStrings.myAddresses,
+              ),
+              CustomDivider(),
+              ProfileItem(
+                icon: AppIcons.keyIcon,
+                title: AppStrings.changePassword,
+              ),
+              CustomDivider(),
+              ProfileItem(icon: AppIcons.offersIcon, title: AppStrings.offers),
+              CustomDivider(),
+              ProfileItem(icon: AppIcons.dealsIcon, title: AppStrings.deals),
+              CustomDivider(),
+              ProfileItem(
+                icon: AppIcons.notificationIcon,
+                title: AppStrings.notification,
+              ),
+              CustomDivider(),
+              ProfileItem(
+                icon: AppIcons.deleteUserIcon,
+                title: AppStrings.deleteMyAccount,
+                svgColor: AppColors.darkRed,
+                hideForwardIcon: true,
+              ),
+              verticalSpace(AppSizes.s30),
+
+              FooterItemWidget(
+                icon: AppIcons.marktingIcon,
+                title: AppStrings.marketingCommunication,
+                toggle: true,
+                description: AppStrings
+                    .onceYouOpenItYouWillReceiveEmailsAndOfferOnYourInbox,
+              ),
+              verticalSpace(AppSizes.s15),
+              FooterItemWidget(
+                icon: AppIcons.teleIcon,
+                title: AppStrings.appCommunication,
+                toggle: false,
+                description: AppStrings
+                    .onceYouOpenItYouWillReceiveNotificationsFromOurApp,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
