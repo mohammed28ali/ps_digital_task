@@ -12,4 +12,13 @@ class AppIcons {
   static const String favIcon = "assets/icons/fav_icon.svg";
   static const String logoutIcon = "assets/icons/logout_icon.svg";
   static const String rewardsIcon = "assets/icons/rewards.svg";
+
+  static const String notificationIcon = "assets/icons/notification_icon.svg";
+  static const String offersIcon = "assets/icons/offers_icon.svg";
+  static const String keyIcon = "assets/icons/key_icon.svg";
+  static const String locationIcon = "assets/icons/location_icon.svg";
+  static const String marktingIcon = "assets/icons/markting_icon.svg";
+  static const String dealsIcon = "assets/icons/deals_icon.svg";
+  static const String deleteUserIcon = "assets/icons/delete_user_icon.svg";
+  static const String teleIcon = "assets/icons/tele_icon.svg";
 }
