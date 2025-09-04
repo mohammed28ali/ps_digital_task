@@ -6,6 +6,11 @@ import 'package:ps_digital_task/core/api/app_interceptors.dart';
 import 'package:ps_digital_task/core/api/dio_consumer.dart';
 import 'package:ps_digital_task/core/network/netwok_info.dart'
     show NetworkInfo, NetworkInfoImpl;
+import 'package:ps_digital_task/features/menu_screen/data/data_source/menu_list_remote_data_source.dart';
+import 'package:ps_digital_task/features/menu_screen/data/repositories/menu_repository_impl.dart';
+import 'package:ps_digital_task/features/menu_screen/domain/repositories/menu_repositry.dart';
+import 'package:ps_digital_task/features/menu_screen/domain/usecases/get_menu_list_use_case.dart';
+import 'package:ps_digital_task/features/menu_screen/presentation/cubit/menu_cubit.dart';
 
 final sl = GetIt.instance;
 Future<void> init() async {
@@ -31,10 +36,26 @@ Future<void> _initCore() async {
   sl.registerLazySingleton<ApiConsumer>(() => DioConsumer(client: sl()));
 }
 
-Future<void> _initDataSources() async {}
+Future<void> _initDataSources() async {
+  sl.registerLazySingleton<MenuListRemoteDataSource>(
+    () => MenuListRemoteDataSourceImpl(apiConsumer: sl()),
+  );
+}
 
-Future<void> _initRepositories() async {}
+Future<void> _initRepositories() async {
+  sl.registerLazySingleton<MenuRepository>(
+    () => MenuRepositoryImpl(remoteDataSource: sl(), networkInfo: sl()),
+  );
+}
 
-Future<void> _initUseCases() async {}
+Future<void> _initUseCases() async {
+  sl.registerLazySingleton<GetMenuListUseCase>(
+    () => GetMenuListUseCase(repository: sl()),
+  );
+}
 
-Future<void> _initBlocs() async {}
+Future<void> _initBlocs() async {
+  sl.registerLazySingleton<MenuCubit>(
+    () => MenuCubit(getMenuListUseCase: sl()),
+  );
+}

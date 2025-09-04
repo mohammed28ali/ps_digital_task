@@ -10,7 +10,7 @@ class ServerException extends Equatable implements Exception {
 
   @override
   String toString() {
-    return '$message';
+    return message.toString();
   }
 }
 

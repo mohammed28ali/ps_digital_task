@@ -1,7 +1,12 @@
+import 'dart:developer';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BottomNavCubit extends Cubit<int> {
   BottomNavCubit() : super(0);
 
-  void changeTab(int index) => emit(index);
+  void changeTab(int index) {
+    log('index: $index');
+    emit(index);
+  }
 }
