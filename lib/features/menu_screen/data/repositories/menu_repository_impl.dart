@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:ps_digital_task/core/errors/exceptions.dart';
 import 'package:ps_digital_task/core/errors/failures.dart';
 import 'package:ps_digital_task/core/network/netwok_info.dart';
@@ -17,19 +19,23 @@ class MenuRepositoryImpl implements MenuRepository {
 
   @override
   Future<Either<Failure, List<RestaurantItemEntity>>> getMenuList() async {
-    if (!(await networkInfo.isConnected)) {
-      return Left(NetworkFailure(message: 'No internet connection'));
-    }
+    // if (!(await networkInfo.isConnected)) {
+    //   return Left(NetworkFailure(message: 'No internet connection'));
+    // }
 
     try {
       final models = await remoteDataSource.getMenuList();
       final entities = models.map((model) => model.toEntity()).toList();
+      log('entities: ${entities.toString()}');
       return Right(entities);
     } on ServerException catch (e) {
+      log('ServerException: ${e.message.toString()}');
       return Left(ServerFailure(message: e.message.toString()));
     } on FormatException catch (e) {
+      log('FormatException: ${e.message.toString()}');
       return Left(ServerFailure(message: 'Data parsing error: ${e.message}'));
     } catch (e) {
+      log('catch: ${e.toString()}');
       return Left(ServerFailure(message: 'Unexpected error: ${e.toString()}'));
     }
   }

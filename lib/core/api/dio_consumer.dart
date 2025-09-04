@@ -56,9 +56,9 @@ class DioConsumer implements ApiConsumer {
     //client.interceptors.add(AppInterceptors(enableLogging: enableLogging));
     client.interceptors.add(
       AwesomeDioInterceptor(
-        logRequestTimeout: false,
-        logRequestHeaders: false,
-        logResponseHeaders: false,
+        logRequestTimeout: true,
+        logRequestHeaders: true,
+        logResponseHeaders: true,
       ),
     );
 
@@ -191,20 +191,21 @@ class DioConsumer implements ApiConsumer {
 
       final responseJson = jsonDecode(response.data.toString());
 
-      final errorMessage = responseJson['errorMessage'];
-      if (errorMessage != null && errorMessage.toString().isNotEmpty) {
-        log('error message from dio consumer: ${errorMessage.toString()}');
-        MessageHandler.show(message: errorMessage.toString(), error: true);
-        throw ServerException(errorMessage.toString());
-      }
+      if (responseJson is Map) {
+        final errorMessage = responseJson['errorMessage'];
+        if (errorMessage != null && errorMessage.toString().isNotEmpty) {
+          log('error message from dio consumer: $errorMessage');
+          MessageHandler.show(message: errorMessage.toString(), error: true);
+          throw ServerException(errorMessage.toString());
+        }
 
-      if (responseJson is Map &&
-          responseJson['data'] is Map &&
-          responseJson['data']?.containsKey('message') == true) {
-        final message = responseJson['data']?['message'];
-        if (message != null && message.toString().isNotEmpty) {
-          log('success message from dio consumer: ${message.toString()}');
-          MessageHandler.show(message: message.toString());
+        if (responseJson['data'] is Map &&
+            responseJson['data']?.containsKey('message') == true) {
+          final message = responseJson['data']?['message'];
+          if (message != null && message.toString().isNotEmpty) {
+            log('success message from dio consumer: $message');
+            MessageHandler.show(message: message.toString());
+          }
         }
       }
 
