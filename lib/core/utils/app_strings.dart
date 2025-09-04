@@ -22,6 +22,9 @@ class AppStrings {
   static const String changePassword = 'Change Password';
   static const String deals = 'Deals';
   static const String deleteMyAccount = 'Delete my Account';
+  static const String orders = 'Orders';
+  static const String favorites = 'Favorites';
+  static const String rewards = 'Rewards';
   static const String onceYouOpenItYouWillReceiveEmailsAndOfferOnYourInbox =
       'Once you open it you will receive emails and offer on your inbox';
   static const String marketingCommunication = 'Marketing Communication';
