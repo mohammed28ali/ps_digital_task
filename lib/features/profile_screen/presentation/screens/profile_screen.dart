@@ -50,7 +50,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              verticalSpace(AppSizes.s5),
+              verticalSpace(AppSizes.s20),
               ProfileItem(
                 icon: AppIcons.locationIcon,
                 title: AppStrings.myAddresses,
