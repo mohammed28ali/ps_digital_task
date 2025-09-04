@@ -21,12 +21,12 @@ class ProfileHeader extends StatelessWidget {
             context.pop();
           },
           child: Container(
-            padding: EdgeInsets.all(AppSizes.s16.w),
+            padding: EdgeInsets.all(AppSizes.s10.w),
             decoration: BoxDecoration(
               color: AppColors.gray3,
               shape: BoxShape.circle,
             ),
-            child: Icon(Icons.arrow_back_ios),
+            child: Center(child: Icon(Icons.arrow_back_ios)),
           ),
         ),
         horizontalSpace(AppSizes.s5),

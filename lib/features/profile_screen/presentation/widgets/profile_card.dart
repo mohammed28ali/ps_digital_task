@@ -60,6 +60,7 @@ class ProfileCard extends StatelessWidget {
                         text: 'Ahmed Magdy',
                         textStyle: TextStyles.font20BlackBold.copyWith(),
                       ),
+                      horizontalSpace(AppSizes.s40.w),
                       Row(
                         children: [
                           SvgPicture.asset(
