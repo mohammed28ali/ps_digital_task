@@ -36,9 +36,18 @@ class ProfileScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  NavigationWidget(icon: AppIcons.favIcon, title: 'Home'),
-                  NavigationWidget(icon: AppIcons.rewardsIcon, title: 'Home'),
-                  NavigationWidget(icon: AppIcons.packet, title: 'Home'),
+                  NavigationWidget(
+                    icon: AppIcons.favIcon,
+                    title: AppStrings.favorites,
+                  ),
+                  NavigationWidget(
+                    icon: AppIcons.rewardsIcon,
+                    title: AppStrings.rewards,
+                  ),
+                  NavigationWidget(
+                    icon: AppIcons.packet,
+                    title: AppStrings.orders,
+                  ),
                 ],
               ),
               verticalSpace(AppSizes.s5),
