@@ -23,30 +23,33 @@ class _CategoryMenuListState extends State<CategoryMenuList> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: AppSizes.s50.h,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: AppSizes.s20),
+      child: SizedBox(
+        height: AppSizes.s50.h,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
 
-        itemCount: menuItems.length,
-        itemBuilder: (context, index) {
-          final item = menuItems[index];
-          return Padding(
-            padding: EdgeInsets.only(
-              left: index == 0 ? AppSizes.s0.w : AppSizes.s12.w,
-            ),
-            child: CategoryMenuButton(
-              title: item["title"],
-              icon: item["icon"],
-              isSelected: selectedIndex == index,
-              onTap: () {
-                setState(() {
-                  selectedIndex = index;
-                });
-              },
-            ),
-          );
-        },
+          itemCount: menuItems.length,
+          itemBuilder: (context, index) {
+            final item = menuItems[index];
+            return Padding(
+              padding: EdgeInsets.only(
+                left: index == 0 ? AppSizes.s0.w : AppSizes.s12.w,
+              ),
+              child: CategoryMenuButton(
+                title: item["title"],
+                icon: item["icon"],
+                isSelected: selectedIndex == index,
+                onTap: () {
+                  setState(() {
+                    selectedIndex = index;
+                  });
+                },
+              ),
+            );
+          },
+        ),
       ),
     );
   }
