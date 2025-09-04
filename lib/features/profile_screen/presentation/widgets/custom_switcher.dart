@@ -16,7 +16,7 @@ class CustomSwitcher extends StatefulWidget {
   final Widget? inactiveIcon;
 
   const CustomSwitcher({
-    Key? key,
+    super.key,
     required this.value,
     required this.onChanged,
     this.activeColor = const Color(0xFF3C3C3C),
@@ -28,7 +28,7 @@ class CustomSwitcher extends StatefulWidget {
     this.animationDuration = const Duration(milliseconds: 200),
     this.activeIcon,
     this.inactiveIcon,
-  }) : super(key: key);
+  });
 
   @override
   State<CustomSwitcher> createState() => _CustomSwitcherState();

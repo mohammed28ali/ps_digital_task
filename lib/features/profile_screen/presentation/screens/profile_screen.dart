@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:ps_digital_task/core/helpers/spacing.dart';
-import 'package:ps_digital_task/core/helpers/text_styles.dart';
-import 'package:ps_digital_task/core/shared_widgets/custom_text.dart';
 import 'package:ps_digital_task/core/utils/app_colors.dart';
 import 'package:ps_digital_task/core/utils/app_icons.dart';
 import 'package:ps_digital_task/core/utils/app_sizes.dart';
 import 'package:ps_digital_task/core/utils/app_strings.dart';
 import 'package:ps_digital_task/features/profile_screen/presentation/widgets/custom_divider.dart';
-import 'package:ps_digital_task/features/profile_screen/presentation/widgets/custom_switcher.dart';
 import 'package:ps_digital_task/features/profile_screen/presentation/widgets/footer_item_widget.dart';
 import 'package:ps_digital_task/features/profile_screen/presentation/widgets/nav_widget.dart';
 import 'package:ps_digital_task/features/profile_screen/presentation/widgets/profile_card.dart';

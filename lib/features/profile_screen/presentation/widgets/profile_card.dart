@@ -5,7 +5,6 @@ import 'package:ps_digital_task/core/helpers/spacing.dart';
 import 'package:ps_digital_task/core/helpers/text_styles.dart';
 import 'package:ps_digital_task/core/shared_widgets/custom_button.dart';
 import 'package:ps_digital_task/core/utils/app_colors.dart';
-import 'package:ps_digital_task/core/utils/app_constants.dart';
 import 'package:ps_digital_task/core/utils/app_icons.dart';
 import 'package:ps_digital_task/core/utils/app_sizes.dart';
 import 'package:ps_digital_task/core/utils/app_strings.dart';
