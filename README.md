@@ -22,7 +22,7 @@ A Flutter application for managing digital tasks with a clean and intuitive user
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ps_digital_task.git
+   git clone https://github.com/mohammed28ali/ps_digital_task.git
    cd ps_digital_task
    ```
 
@@ -79,12 +79,7 @@ Key packages used in this project:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📬 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - your.email@example.com
-
-Project Link: [https://github.com/yourusername/ps_digital_task](https://github.com/yourusername/ps_digital_task)
+Project Link: [https://github.com/mohammed28ali/ps_digital_task](https://github.com/yourusername/ps_digital_task)
