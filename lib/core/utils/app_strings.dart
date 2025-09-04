@@ -11,4 +11,6 @@ class AppStrings {
   static const String sandwiches = 'Sandwiches';
   static const String customize = 'Customize';
   static const String items = 'Items';
+  static const String logout = 'Logout';
+  static const String updateProfile = 'Update Profile';
 }
