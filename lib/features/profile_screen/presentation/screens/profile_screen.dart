@@ -10,6 +10,7 @@ import 'package:ps_digital_task/core/utils/app_sizes.dart';
 import 'package:ps_digital_task/core/utils/app_strings.dart';
 import 'package:ps_digital_task/features/profile_screen/presentation/widgets/custom_divider.dart';
 import 'package:ps_digital_task/features/profile_screen/presentation/widgets/custom_switcher.dart';
+import 'package:ps_digital_task/features/profile_screen/presentation/widgets/footer_item_widget.dart';
 import 'package:ps_digital_task/features/profile_screen/presentation/widgets/nav_widget.dart';
 import 'package:ps_digital_task/features/profile_screen/presentation/widgets/profile_card.dart';
 import 'package:ps_digital_task/features/profile_screen/presentation/widgets/profile_header.dart';
@@ -87,56 +88,6 @@ class ProfileScreen extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class FooterItemWidget extends StatelessWidget {
-  final String title;
-  final String description;
-  final bool toggle;
-  final String icon;
-  const FooterItemWidget({
-    super.key,
-    required this.title,
-    required this.toggle,
-    required this.description,
-    required this.icon,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        SvgPicture.asset(icon, height: AppSizes.s30.h, width: AppSizes.s30.w),
-        horizontalSpace(AppSizes.s10),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-
-            children: [
-              CustomText(
-                text: title,
-                textStyle: TextStyles.font20BlackBold.copyWith(),
-              ),
-              CustomText(
-                lines: 2,
-                align: TextAlign.left,
-                textOverFlow: TextOverflow.ellipsis,
-                text: description,
-                textStyle: TextStyles.font20BlackBold.copyWith(
-                  fontSize: AppSizes.s15,
-                  color: AppColors.gray2,
-                ),
-              ),
-            ],
-          ),
-        ),
-
-        CustomSwitcher(value: toggle, onChanged: (value) {}),
-      ],
     );
   }
 }
